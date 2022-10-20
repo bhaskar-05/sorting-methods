@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    int arr[8]={7,8,5,4,1,9,2};
+    int start=0;
+    int end=7;
+    for(int i=0; i<7; i++) {
+        
+        int minindex=i;
+        for (int j=i+1; j<8; j++) {
+            
+            if (arr[minindex]>arr[j]) {
+                
+                minindex=j;
+            }
+        }
+        swap (arr[minindex], arr[i]);
+    }
+    for (int k=0; k<8; k++) {
+        cout << arr[k] << " ";
+    }
+}
